@@ -80,6 +80,8 @@ curl -X POST http://localhost:8080/api/ltv \
 4. **В конце блока — один PR в `main` своего репо.** Заголовок — диапазон заданий блока и
    название, например `[1.2.1–1.2.3] Интерфейс Kilo` (между номерами — длинное тире `–`):
 
+   Перед открытием PR проверьте изменённые файлы: `git diff --stat main...HEAD`.
+
    ```bash
    git push -u origin HEAD
    gh pr create --base main --title "[1.2.1–1.2.3] Интерфейс Kilo" --fill
